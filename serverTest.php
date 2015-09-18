@@ -9,7 +9,7 @@
 
 namespace WatcherHangzhou;
 
-WAutoloader(['WatcherHangzhou'=>__DIR__]);
+psr4Autoloader(['WatcherHangzhou'=>__DIR__]);
 
 
 class echoServer extends WebSocketServer {
@@ -50,7 +50,7 @@ catch (\Exception $e) {
 
 
 
-function WAutoloader($directories, $fileFormat = null, $namespaceAliases = null, $classAliases = null) {
+function psr4Autoloader($directories, $fileFormat = null, $namespaceAliases = null, $classAliases = null) {
     $fileFormat = $fileFormat ?: '%s.php';
     $namespaceAliases = $namespaceAliases ?: array();
     $classAliases = $classAliases ?: array();
