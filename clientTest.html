@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p>try {ws.send("erter");} catch(er){console.log(er);}</p>
+
+<script>
+
+    var ws = new WebSocket("ws://0.0.0.0:9000/");
+    ws.onopen = function(){
+        console.log("握手成功");
+    };
+    ws.onmessage = function(e){
+        console.log("message:" + e.data);
+    };
+    ws.onerror = function(){
+        console.log("error");
+    };
+    //try {ws.send("erter");} catch(er){console.log(er);}
+
+</script>
+
+</body>
+</html>
